@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <title>FBLA Dentistry Careers</title>
+    <script>
+        function sendEmail() {
+            event.preventDefault(); // Prevents actual submission
+            alert('Application submitted! We will contact you via email.');
+        }
+    </script>
+</head>
+<body>
+<nav class="container-fluid">
+    <ul>
+        <li><strong>FBLA Dentistry Careers</strong></li>
+    </ul>
+    <ul>
+        <li><a href="#benefits">Benefits</a></li>
+        <li><a href="#openings">Job Openings</a></li>
+        <li><a href="#apply" role="button">Apply Now</a></li>
+    </ul>
+</nav>
+<main class="container">
+    <div class="grid">
+        <section id="benefits">
+            <hgroup>
+                <h2>Why Work With Us</h2>
+                <h3>Benefits & Culture</h3>
+            </hgroup>
+            <p>At FBLA Dentistry, we believe in providing our employees with a work environment that encourages growth, respects diversity, and promotes health and wellness. Our comprehensive benefits package includes health insurance, paid time off, continuing education allowances, and a supportive work culture.</p>
+        </section>
+        <img src="https://live.staticflickr.com/7250/7637808372_bbafae7ce4.jpg" alt="FBLA Dentistry Office" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 20px auto;">
+    </div>
+</main>
+<main class="container">
+    <div class="grid">
+        <section id="openings">
+            <hgroup>
+                <h2>Current Job Openings</h2>
+                <h3>Join Our Team</h3>
+            </hgroup>
+            <details>
+                <summary>Dental Hygienist</summary>
+                <p>As a Dental Hygienist at FBLA Dentistry, you'll have the opportunity to work alongside our dental team to provide excellent oral health care. Responsibilities include teeth cleaning, examining patients for signs of oral diseases such as gingivitis, and providing other preventive dental care. 70-85k/year </p>
+            </details>
+            <details>
+                <summary>Orthodontic Assistant</summary>
+                <p>The Orthodontic Assistant supports orthodontists in patient care, helping with the adjustment of orthodontic appliances and providing patient education on oral hygiene specific to orthodontic treatment. 90-95k/year</p>
+            </details>
+            <details>
+                <summary>Office Manager</summary>
+                <p>The Office Manager will oversee the daily operations of our dental office, ensuring the efficiency of our services, managing staff, and handling administrative tasks to facilitate smooth and effective office functioning. 100-115k/year</p>
+            </details>
+        </section>
+    </div>
+</main>
+<section aria-label="Subscribe example" id="apply">
+    <div class="container">
+        <article>
+            <hgroup>
+                <h2>Online Job Application</h2>
+                <h3>Apply Today!</h3>
+            </hgroup>
+            <form class="grid" onsubmit="sendEmail()">
+                <input type="text" id="firstname" name="firstname" placeholder="First Name" aria-label="First Name" required>
+                <input type="text" id="lastname" name="lastname" placeholder="Last Name" aria-label="Last Name" required>
+                <input type="email" id="email" name="email" placeholder="Email" aria-label="Email" required>
+                <input type="text" id="position" name="position" placeholder="Position Applied For" aria-label="Position Applied For" required>
+                <button type="submit">Submit Application</button>
+            </form>
+        </article>
+    </div>
+</section>
+<footer class="container">
+    <small><a href="#">Privacy Policy</a> • <a href="#">Terms of Use</a></small>
+</footer>
+</body>
+</html>
