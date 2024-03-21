@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <title>Apply Now - FBLA Dentistry</title>
+    <script>
+        function showFileName() {
+            var input = document.getElementById('fileInput');
+            var infoArea = document.getElementById('fileInputName');
+            infoArea.textContent = 'File name: ' + input.files[0].name;
+        }
+
+        function submitForm(event) {
+            event.preventDefault(); // Prevents the form from submitting traditionally
+            alert('Application submitted! Thank you for your interest.');
+        }
+    </script>
+</head>
+<body>
+<nav class="container-fluid">
+    <ul>
+        <li><strong>FBLA Dentistry Careers</strong></li>
+    </ul>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="job_openings.html">Job Openings</a></li>
+        <li><a href="apply_now.html">Apply Now</a></li>
+    </ul>
+</nav>
+<main class="container">
+    <section>
+        <h2>Apply Now</h2>
+        <form onsubmit="submitForm(event)">
+            <input type="text" id="firstname" name="firstname" placeholder="First Name" required>
+            <input type="text" id="lastname" name="lastname" placeholder="Last Name" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <select id="position" name="position" required>
+                <option value="">Select Position</option>
+                <option value="Dental Hygienist">Dental Hygienist</option>
+                <option value="Orthodontic Assistant">Orthodontic Assistant</option>
+                <option value="Office Manager">Office Manager</option>
+            </select>
+            <div>
+                <label for="fileInput">Upload Resume:</label>
+                <input type="file" id="fileInput" name="fileInput" onchange="showFileName()">
+                <span id="fileInputName"></span>
+            </div>
+            <button type="submit">Submit Application</button>
+        </form>
+    </section>
+</main>
+<footer class="container">
+    <small><a href="#">Privacy Policy</a> • <a href="#">Terms of Use</a></small>
+</footer>
